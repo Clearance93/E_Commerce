@@ -8,12 +8,23 @@ export class CartService {
 
   public cartItemList: any = [];
   public producList = new BehaviorSubject<any>([]);
+  public featureList = new BehaviorSubject<any>([]);
+  public saleList = new BehaviorSubject<any>([]);
 
   constructor() { }
 
   getProduct(){
     return this.producList.asObservable();
   }
+
+  featureProduct(){
+    return this.featureList.asObservable();
+  }
+
+  saleProduct(){
+    return this.saleList.asObservable();
+  }
+
 
   // setProduct(product: any) {
   //   this.cartItemList.push(...product);
@@ -36,7 +47,7 @@ export class CartService {
 
   removeCartItem(product: any){
     this.cartItemList.map((a:any, index:any) => {
-      if(product.is === a.id){this.cartItemList.splice(index,1);
+      if(product.is === a.id){this.cartItemList.splice(index, 1);
       }
     })
     this.producList.next(this.cartItemList);

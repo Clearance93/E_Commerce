@@ -1,26 +1,14 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="card col-md-3" *ngFor="let product of productsList">
-            <img class="image" src="{{product.product_image}}" alt="" width="90%">
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <th>Product</th>
-                        <td>{{product.product_name}}</td>
-                    </tr>
-                    <tr>
-                        <th>Description</th>
-                        <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 10ch;">{{product.product_desc}}</td>
-                    </tr>
-                    <tr>
-                        <th>Price</th>
-                        <td>{{product.product_price}}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <button class="btn btn-warning" (click)="addToCart(product)">Add to cart</button>
+    <div class="items">
+        <div class="row">
+            <div class="col-md-3 " *ngFor="let pro of productsList">
+                <img class="img" src="{{pro.product_image}}" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{pro.product_desc}}</h5>
+                <p>R{{pro.product_price}}</p>
+                <button class="btn btn-warning" (click)="addToCart(pro)">Add to cart</button>
+            </div>
         </div>
     </div>
 </div>

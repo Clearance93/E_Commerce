@@ -1,0 +1,65 @@
+
+.contact{
+    background-image: url('https://quizterra.com/files/storage/2019/03/08/6q4AIGVsY3qKVZDp2kMm0SefrCDMVHG6.jpg');
+    background-size: cover;
+}
+
+
+.content{
+    text-align: center;
+}
+
+.content h2{
+    color: orangered;
+    font-weight: 700;
+}
+
+.content p{
+    color: darkblue;
+    background-color: lightgray;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px;
+    background: radial-gradient(#fff, #ffd6d6, #d6d6ff);
+    border-radius: 1000px;
+}
+
+.contactInfo{
+    padding-right: 170px;
+    color: darkblue;
+    margin-right: 60px;
+    border-radius: 60px;
+    background-image: url('https://quizterra.com/files/storage/2019/03/08/6q4AIGVsY3qKVZDp2kMm0SefrCDMVHG6.jpg');
+
+}
+
+.box{
+    align-items: center;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+h3{
+    color: orangered;
+}
+
+.contactForm{
+    width: 420px;
+}
+
+.inputBox{
+    padding: 20px;
+    width: 150px;
+}
+
+input textarea{
+    width: 320px;
+}
+
+.form-control{
+    width: 350px;
+}

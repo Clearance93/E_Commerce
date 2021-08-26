@@ -1,1 +1,151 @@
-<p>Home works!</p>
+
+
+
+    <div class="rows">
+        <div class="col-3 head">
+            <h1>The wait is over <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zM7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+              </svg>...</h1>
+            <p>Our online shop is alive and ready. The covid can never beat the good relationship we have all together. You and us we are the greatest of them all. Come and shop with us online</p>
+            <button routerLink="/login" class="btn btn-outline-danger">Shop now</button>
+        </div>
+           <div class="image col-2">
+            <img src="https://i.gifer.com/Bqj5.gif" alt="">
+           </div>
+    </div>
+
+ 
+    <div class="items">
+        <div class="row">
+            <div class="col-md-3 " *ngFor="let pro of productList">
+                <img class="img" (click)="image()" src="{{pro.product_image}}" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{pro.product_desc}}</h5>
+                <h6>{{pro.product_price}}</h6>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------------------ Features ----------------------------------- -->
+    
+ <div class="feature">
+    <div class="items">
+        <div class="row">
+            <h3 class="title">Features</h3>
+            <div class="col-md-3" *ngFor="let feat of featureList">
+                <img class="img" (click)="addToCart(feat)" src="{{feat.product_image}}" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{feat.product_desc}}</h5>
+                <h6>R{{feat.product_price}}</h6>
+            </div>
+        </div>
+      </div>
+ </div>
+
+
+ <!-- ---------------------------- Sale --------------------------------------------- -->
+
+ <div class="sale">
+     <div class="row">
+         <div class="title">Sale</div>
+         <div class="col-md-3" *ngFor="let sale of saleList">
+            <img src="{{sale.product_image}}" (click)="addToCartSale(sale)" alt="" class="img">
+             <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{sale.product_desc}}</h5>
+             <h6>was R{{sale.product_normal_price}}</h6>
+             <h6>now R{{sale.product_sale_price}} <sup style="background-color: red; color: #fff;">30%</sup></h6>
+            </div>
+     </div>
+ </div> <br > <br >
+
+ <!-- --------------------------------------------- Compatition --------------------------------------------- -->
+
+ <div class="competition">
+    <div class="container">
+        <div class="sale">
+            <div class="title">Compatition</div>
+            <div class="row now">
+                <div class="col-md-7">
+                    <img class="louis" src="https://luxity.co.za/wp-content/uploads/2015/08/11.png" alt="">
+                </div>
+                <div class="col-md-5 para">
+                    <p>Spend more than R10 000 and win louis vuitton brand</p>
+                   <h3><marquee behavior="scroll slide alternate" direction="left" style="color: orangered;">louis Vuitton <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
+                    <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"/>
+                  </svg>...<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-emoji-laughing-fill" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5c0 .501-.164.396-.415.235C6.42 6.629 6.218 6.5 6 6.5c-.218 0-.42.13-.585.235C5.164 6.896 5 7 5 6.5 5 5.672 5.448 5 6 5s1 .672 1 1.5zm5.331 3a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zm-1.746-2.765C10.42 6.629 10.218 6.5 10 6.5c-.218 0-.42.13-.585.235C9.164 6.896 9 7 9 6.5c0-.828.448-1.5 1-1.5s1 .672 1 1.5c0 .501-.164.396-.415.235z"/>
+                  </svg></marquee></h3>
+                   <small>The most expensive and real brand globally. Brands that boost your ego and pushes you forward globally. Compatative with the desginers </small>
+                </div>
+            </div>
+        </div> 
+     </div>
+ </div>
+
+
+ <div class="brands">
+    <div class="container">
+        <div class="items">
+            <div class="row">
+                <div class="title">Our Sponsors and Clients</div>
+               <div class="col-md-2">
+                <img style="margin-bottom: 10px;" class="img" src="https://logos-world.net/wp-content/uploads/2020/03/Coca-Cola-Logo-1987-2009.png" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="https://www.takealot.com/static/images/logo_transparent.png" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="http://assets.stickpng.com/images/58480fd7cef1014c0b5e4943.png" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="https://image.emojipng.com/976/9852976.jpg" alt="">
+               </div>
+               <div class="col-md-2">
+                <img class="img" src="http://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png" alt="">
+               </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+<!-- --------------------------------------------- Footer --------------------------------------------- -->
+
+ <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer col-md-3 first">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="https://www.earfy.net/wp-content/uploads/2017/06/2000px-Download_on_the_App_Store_Badge.svg_.png" alt="">
+                    <img src="https://www.aps.edu/students-parents/images/downloadOnTheGooglePlayStoreBadge.png/image_preview" alt="">
+                </div>
+            </div>
+            <div class="footer col-md-3 first another">
+                <img src="https://logodix.com/logo/1603728.jpg" alt="" style="width: 120; height: 120px; border-radius: 15px;">
+                <p style="margin-bottom: 10px;">Our purpose is break the bridge that covid was trying to build to make our lives quite difficult. Now you can practice social destance and quarantine, yet be able to ge your product back at you...</p>
+                &copy; Developed by <small>Clearance Morumudi</small>
+            </div>
+            <div class="footer col-md-3 second">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliation</li>
+                </ul>
+            </div>
+            <div class="footer col-md-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ </div>

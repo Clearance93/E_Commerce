@@ -1,6 +1,6 @@
 
 export class Products {
-    _id: string = "";
+  _id: any;
     product_name: string = "";
     product_desc: string = "";
     product_price: string = "";
